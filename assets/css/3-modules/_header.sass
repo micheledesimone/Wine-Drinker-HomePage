@@ -1,0 +1,110 @@
+.menu-container
+	position: relative
+	z-index: 99999
+	max-width: 85%
+	margin: 0 auto
+	background-color: #fff
+	box-shadow: 0px 0px 23px 4px rgba(0,0,0,0.57)
+	text-transform: uppercase
+	transition: max-width .3s ease-in-out
+
+.top-menu
+	color: $lightgrey
+	font-size: 12px
+	padding: 20px 75px 30px
+	white-space: initial
+	border-bottom: 1px $lightgrey solid
+
+	li a:hover
+		color: $gold
+
+.top-menu-sx, .main-menu-sx
+	float: left
+.top-menu-dx, .main-menu-dx
+	float: right
+
+.top-menu ul, .main-menu ul
+	list-style-type: none
+
+	li
+		float: left
+		margin-right: 40px
+
+		&:last-child
+			margin-right: 0
+
+.top-menu-dx
+	li:first-child
+		margin-right: 5px
+	li:nth-child(2)
+		margin-right: 5px
+
+.top-menu-sx	
+	li:last-child
+		font-weight: 700
+
+.main-menu
+	clear: both
+	padding: 30px 75px 40px
+	font-size: 14px
+	color: $midgrey
+
+	.main-menu-sx li:first-child
+		font-size: 30px
+		transform: translateY(-10px)
+
+	li a:hover
+		color: $gold
+
+.logo
+	position: absolute
+	background:
+		image: url(../img/logo.png)
+		repeat: no-repeat
+		size: contain
+		color: transparent
+	width: 300px
+	height: 70px
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+
+.hamburger-menu-icon i
+	font-size: 30px
+	&:hover
+		color: $gold
+	position: absolute
+	top: 20px
+	right: 20px
+	display: none
+
+// RESPONSIVE
+
+@media screen and (max-width: 1400px)
+	.menu-container
+		max-width: 100%
+	.top-menu, .main-menu
+		padding-left: 50px
+		padding-right: 50px
+
+
+@media screen and (max-width: 1150px)
+	.menu-container
+		max-width: 100%
+		height: 90px
+		padding: 10px 20px
+
+	.top-menu, .main-menu
+		display: none
+	
+	.logo
+		width: 200px
+		top: 20px
+		left: 20px
+		transform: none
+	.hamburger-menu-icon i
+		display: block
+
+
+
+

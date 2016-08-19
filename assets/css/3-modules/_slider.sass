@@ -1,0 +1,102 @@
+.slider-container
+	+clearfix
+	max-width: 85%
+	height: 700px
+	overflow: hidden
+	margin: 0 auto
+	position: relative
+	margin-top: 30px
+
+.slider
+	max-width: 80%
+	height: 100%
+	margin: 0 auto
+	display: flex
+	align-items: center
+	justify-content: center
+
+.slide
+	margin: 0 auto
+	display: none
+
+.slide-description, .slide-image
+	max-width: 50%
+	float: left
+
+.slide-description
+	margin-right: 50px
+	margin-top: 100px
+	h1
+		text-transform: uppercase
+		font-size: 50px
+		margin-bottom: 30px
+		line-height: 60px
+		color: $darkgrey
+	p
+		font-size: 12px
+		line-height: 22px
+		margin-bottom: 60px
+		color: $midgrey
+	
+	.cta-button
+		padding: 15px 20px
+		background-color: $gold
+		color: #fff
+		text-transform: uppercase
+		letter-spacing: 2px
+		&:hover,
+		&:active
+			background-color: shade($gold, 15%)
+.slide-image
+	img
+		width: 350px
+		height: 650px
+		margin-top: 30px
+
+.active-slide
+	display: block	
+
+.slider-nav
+	position: absolute
+	bottom: 50%
+	width: 100%
+
+	.arrow-prev, .arrow-next
+		padding: 18px 20px
+		background-color: #fff
+		transform: rotate(45deg)
+		opacity: 0.5
+		color: $midgrey
+		i
+			transform: rotate(-45deg)
+		&:hover
+			opacity: 0.8
+
+	.arrow-prev
+		float: left
+		margin-left: 30px
+	.arrow-next
+		float: right
+		margin-right: 30px
+
+// RESPONSIVE
+
+@media screen and (max-width: 1150px)
+	.slider-container
+		height: 500px
+		margin-top: 0
+		max-width: 100%
+		margin-bottom: 50px
+		.slider
+			max-width: 90%
+	.slide-description, .slide-image
+		max-width: 100%
+	.slide-description
+		text-align: center
+		margin-right: 0
+		margin-top: 0
+		br
+			display: none
+		padding: 0 60px
+	.slide-image img
+		display: none
